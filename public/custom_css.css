@@ -1,0 +1,314 @@
+/* Custom styling for Agentic Maintenance Planning UI */
+
+/* ========================================
+   Global Styles
+   ======================================== */
+
+:root {
+    --primary-color: #1E90FF;
+    --secondary-color: #4DA6FF;
+    --success-color: #32CD32;
+    --warning-color: #FFD700;
+    --error-color: #DC143C;
+    --agent-thinking: #9370DB;
+}
+
+/* ========================================
+   Message Styling
+   ======================================== */
+
+.message-container {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Agent message cards */
+.step {
+    border-left: 3px solid var(--primary-color);
+    padding-left: 15px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.step:hover {
+    border-left-color: var(--secondary-color);
+    background-color: rgba(30, 144, 255, 0.05);
+}
+
+/* ========================================
+   Agent Avatar Styling
+   ======================================== */
+
+.message .avatar {
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 2px 8px rgba(30, 144, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.message .avatar:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(30, 144, 255, 0.5);
+}
+
+/* ========================================
+   Table Styling (Material Readiness)
+   ======================================== */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+table thead {
+    background: linear-gradient(135deg, #1E90FF 0%, #4DA6FF 100%);
+    color: white;
+}
+
+table th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 0.5px;
+}
+
+table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+table tr:hover {
+    background-color: rgba(30, 144, 255, 0.05);
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Status icons in tables */
+table td:last-child {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* ========================================
+   Details/Summary (Thinking Process)
+   ======================================== */
+
+details {
+    background: linear-gradient(135deg, rgba(147, 112, 219, 0.1) 0%, rgba(147, 112, 219, 0.05) 100%);
+    border-left: 4px solid var(--agent-thinking);
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+details:hover {
+    background: linear-gradient(135deg, rgba(147, 112, 219, 0.15) 0%, rgba(147, 112, 219, 0.08) 100%);
+    box-shadow: 0 2px 8px rgba(147, 112, 219, 0.2);
+}
+
+details summary {
+    font-weight: 600;
+    color: var(--agent-thinking);
+    user-select: none;
+    padding: 5px 0;
+}
+
+details[open] summary {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--agent-thinking);
+}
+
+details pre {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+/* ========================================
+   Code Blocks
+   ======================================== */
+
+code {
+    background: rgba(30, 144, 255, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+pre code {
+    display: block;
+    padding: 15px;
+    background: #2D2D2D;
+    color: #F8F8F2;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+/* ========================================
+   Loading Animations
+   ======================================== */
+
+.loading-dots {
+    display: inline-block;
+}
+
+.loading-dots::after {
+    content: '...';
+    animation: dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% { content: '.'; }
+    40% { content: '..'; }
+    60%, 100% { content: '...'; }
+}
+
+/* ========================================
+   Status Badges
+   ======================================== */
+
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-success {
+    background: rgba(50, 205, 50, 0.2);
+    color: #228B22;
+}
+
+.badge-warning {
+    background: rgba(255, 215, 0, 0.2);
+    color: #DAA520;
+}
+
+.badge-error {
+    background: rgba(220, 20, 60, 0.2);
+    color: #B22222;
+}
+
+.badge-info {
+    background: rgba(30, 144, 255, 0.2);
+    color: #1873CC;
+}
+
+/* ========================================
+   Emoji Styling
+   ======================================== */
+
+.emoji {
+    font-size: 1.2em;
+    display: inline-block;
+    margin: 0 2px;
+}
+
+/* ========================================
+   Tool Usage Display
+   ======================================== */
+
+.tool-call {
+    background: linear-gradient(135deg, rgba(96, 228, 228, 0.1) 0%, rgba(96, 228, 228, 0.05) 100%);
+    border-left: 3px solid #60E4E4;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 6px;
+    font-family: 'Monaco', 'Menlo', monospace;
+    font-size: 0.9em;
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+@media (max-width: 768px) {
+    table {
+        font-size: 0.85em;
+    }
+    
+    table th, table td {
+        padding: 8px 10px;
+    }
+    
+    .step {
+        padding-left: 10px;
+    }
+}
+
+/* ========================================
+   Dark Mode Adjustments
+   ======================================== */
+
+@media (prefers-color-scheme: dark) {
+    table {
+        background: #2D2D2D;
+    }
+    
+    table td {
+        border-bottom-color: #404040;
+    }
+    
+    table tr:hover {
+        background-color: rgba(30, 144, 255, 0.1);
+    }
+    
+    details {
+        background: linear-gradient(135deg, rgba(147, 112, 219, 0.15) 0%, rgba(147, 112, 219, 0.08) 100%);
+    }
+    
+    details pre {
+        background: rgba(255, 255, 255, 0.05);
+    }
+}
+
+/* ========================================
+   Scrollbar Styling
+   ======================================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}

@@ -1,0 +1,12 @@
+work_order_id,equipment_code,equipment_name,wo_type,frequency,description,primary_role,safety_critical
+WO-PS-001,PS,Primary Shredder,Preventive,Daily,Daily inspection and monitoring,OP,No
+WO-PS-007,PS,Primary Shredder,Preventive,Weekly,Knife bolt torque check,MMT,No
+WO-PS-015,PS,Primary Shredder,Preventive,Monthly,Hydraulic filter replacement,HT,Yes
+WO-PS-020,PS,Primary Shredder,Preventive,Quarterly,Bearing inspection and lubrication,MMT,Yes
+WO-PS-025,PS,Primary Shredder,Corrective,On-Demand,Bearing replacement due to vibration,MMT,Yes
+WO-PS-030,PS,Primary Shredder,Shutdown,Annual,Complete knife set replacement,MMT,Yes
+WO-AC-001,AC,Air Compressor,Preventive,Daily,Daily compressor check and condensate drain,OP,No
+WO-AC-006,AC,Air Compressor,Preventive,Monthly,Oil filter replacement,MMT,No
+WO-AC-012,AC,Air Compressor,Preventive,Quarterly,Oil and separator change,MMT,Yes
+WO-AC-018,AC,Air Compressor,Preventive,Monthly,Motor and electrical inspection,EMT,Yes
+WO-AC-025,AC,Air Compressor,Corrective,On-Demand,Pressure sensor calibration,EMT,No

@@ -1,0 +1,15 @@
+part_code,part_name,equipment_code,unit,min_stock,reorder_level,current_stock
+PS-KN-001,Shredder Knife Set,PS,set,1,2,2
+PS-HF-003,Hydraulic Oil Filter,PS,pc,6,8,8
+PS-KB-005,Knife Bolts & Spacers Set,PS,set,2,3,3
+PS-SS-007,Shaft Seals,PS,set,2,3,4
+PS-BRG-010,Deep Groove Ball Bearing 6205,PS,pc,4,6,4
+PS-GRS-012,Bearing Grease EP2,PS,cartridge,3,5,6
+PS-HOS-015,Hydraulic Hose Assembly,PS,pc,2,4,3
+AC-OF-002,Compressor Oil Filter,AC,pc,4,6,5
+AC-AOS-004,Air-Oil Separator,AC,pc,1,2,1
+AC-OIL-006,Compressor Oil ISO VG 46,AC,liter,20,30,25
+AC-IF-008,Intake Air Filter,AC,pc,2,4,3
+AC-BLT-010,V-Belt Set,AC,set,1,2,2
+AC-SEN-012,Pressure Sensor 0-10 bar,AC,pc,1,2,1
+AC-MOT-015,Motor Coupling,AC,pc,1,2,2

@@ -1,0 +1,8 @@
+role_code,role_name,responsibilities,can_lockout,can_approve_wo
+OP,Operator,"Daily checks, monitoring, basic cleaning",No,No
+MMT,Mechanical Maintenance Technician,"Mechanical repairs, replacements, bearing work",Yes,No
+EMT,Electrical/Instrumentation Technician,"Electrical work, sensor calibration, motor inspection",Yes,No
+HT,Hydraulic Technician,"Hydraulic system maintenance, filter changes, oil work",Yes,No
+MS,Maintenance Supervisor,"Planning, approval, work order creation, verification",Yes,Yes
+SO,Safety Officer,"Safety compliance, risk assessment, work verification",No,Yes
+SK,Storekeeper,"Spare parts management, inventory control",No,No

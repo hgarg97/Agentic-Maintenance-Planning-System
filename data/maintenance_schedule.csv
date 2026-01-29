@@ -1,0 +1,9 @@
+date,work_order_id,shift,scheduled_by
+2025-01-20,WO-PS-001,Morning,MS
+2025-01-20,WO-AC-001,Morning,MS
+2025-01-22,WO-PS-007,Afternoon,MS
+2025-01-25,WO-PS-015,Morning,MS
+2025-01-27,WO-AC-006,Afternoon,MS
+2025-02-01,WO-PS-020,Morning,MS
+2025-02-05,WO-AC-012,Day,MS
+2025-02-10,WO-AC-018,Afternoon,MS
