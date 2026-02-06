@@ -67,7 +67,8 @@ async def chat(
         kwargs["tool_choice"] = "auto"
 
     if stream:
-        return await _stream_chat(client, **kwargs)
+        # Return the async generator directly (don't await it)
+        return _stream_chat(client, **kwargs)
     else:
         response = await client.chat.completions.create(**kwargs)
         return {

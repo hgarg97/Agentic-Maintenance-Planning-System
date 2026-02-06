@@ -3,25 +3,25 @@
 # ============================================================
 
 # LangGraph & LangChain
-langgraph>=0.4.0
-langchain-openai>=0.3.0
-langchain-core>=0.3.0
+langgraph
+langchain-openai
+langchain-core
 
 # LangGraph Checkpointer for PostgreSQL
-langgraph-checkpoint-postgres>=2.0.0
+langgraph-checkpoint-postgres
 
 # PostgreSQL Driver (psycopg3 - required by LangGraph checkpoint)
-psycopg[binary]>=3.1.0
-psycopg-pool>=3.2.0
+psycopg[binary]
+psycopg-pool
 
 # OpenAI
-openai>=1.50.0
+openai
 
 # Chainlit UI
-chainlit>=2.0.0
+chainlit
 
 # Environment Variables
-python-dotenv>=1.0.0
+python-dotenv
 
 # Data Validation
-pydantic>=2.0.0
+pydantic

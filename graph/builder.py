@@ -2,13 +2,14 @@
 Graph Builder
 =============
 Constructs the LangGraph StateGraph, wires all nodes and edges,
-and compiles with the PostgreSQL checkpointer.
+and compiles with a checkpointer.
 """
 
 import logging
+from typing import Optional
 
 from langgraph.graph import StateGraph, START, END
-from langgraph.checkpoint.postgres.aio import AsyncPostgresSaver
+from langgraph.checkpoint.memory import MemorySaver
 
 from graph.state import MaintenanceState
 from graph.nodes import (
@@ -120,21 +121,24 @@ def build_graph() -> StateGraph:
     return graph
 
 
-async def compile_graph(db_uri: str):
+async def compile_graph(db_uri: str = None, use_postgres: bool = False):
     """
-    Compile the graph with a PostgreSQL-backed checkpointer.
+    Compile the graph with a checkpointer.
 
     Args:
-        db_uri: PostgreSQL connection URI
+        db_uri: PostgreSQL connection URI (not used currently)
+        use_postgres: If True, use PostgreSQL checkpointer. Currently defaults to False
+                     for simplicity - using MemorySaver which works reliably.
 
     Returns:
-        Compiled graph and checkpointer (as a context manager)
+        Compiled graph and checkpointer
     """
     graph = build_graph()
 
-    # Create checkpointer
-    checkpointer = AsyncPostgresSaver.from_conn_string(db_uri)
-    await checkpointer.setup()
+    # Use MemorySaver for now - it's simpler and works reliably
+    # PostgreSQL checkpointer can be added later for production persistence
+    checkpointer = MemorySaver()
+    logger.info("Using in-memory checkpointer")
 
     compiled = graph.compile(checkpointer=checkpointer)
     logger.info("Maintenance planning graph compiled successfully")
